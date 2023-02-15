@@ -1,4 +1,4 @@
-# InfluxDB1.8-vers-2.6
+# InfluxDB 1.8-vers-2.6
 
 ## Le contexte:
 
