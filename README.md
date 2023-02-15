@@ -77,6 +77,13 @@ Nous passons sur le container de V2 avec cette commande depuis l'hote de V2:
 
 `` docker exec -it influxdb2 bash``
 
+il faut supprimer les 7 premières lignes (qui sont des commentaires) des 3 fichiers car elles occasionnent une erreur lors de l'importatiom
+```
+sed -i '1,7d' /home/import/2021
+sed -i '1,7d' /home/import/2022
+sed -i '1,7d' /home/import/2023
+```
+
 Pour l'importation des données, on lance ces 3 lignes
 ```
 influx write -o my_org -b my_new_bucket -t my_token -f /home/import/2021
